@@ -58,5 +58,3 @@ def solution(number, from_base, to_base):
         digits.append(int_to_char(current_digit))
 
     return '-' + ''.join(reversed(digits)) if is_negative else ''.join(reversed(digits))
-
-    # now decimal to toBase
