@@ -19,7 +19,6 @@ def solve(n, row, path, solutions):
 
 
 def solution(n):
-    # return solve(0, 0, n, board, [], [])
     solutions = []
     solve(n, 0, [], solutions)
     return solutions
