@@ -1,8 +1,8 @@
 def is_valid(path):
-    second_last_row = len(path) - 1
-    for index in range(second_last_row):
-        diff = abs(path[index] - path[-1])
-        if diff == 0 or diff == second_last_row - index:
+    last_row = len(path) - 1
+    for index in range(last_row):
+        diff = abs(path[index] - path[last_row])
+        if diff == 0 or diff == last_row - index:
             return False
     return True
 
