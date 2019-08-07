@@ -1,5 +1,5 @@
 from unittest import TestCase
-from .problem_16_18_spiral_ordering import *
+from .problem_6_18_spiral_ordering import *
 
 
 class TestSolution(TestCase):
