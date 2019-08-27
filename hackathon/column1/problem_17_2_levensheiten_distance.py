@@ -14,11 +14,10 @@ def dp(source, target):
         return 0
 
     longest = max(len(source), len(target))
-    total_cost = 0
 
     for index in range(longest):
         if index == len(source) or index == len(target):
-            return total_cost + abs(len(target) - len(source))
+            return abs(len(target) - len(source))
 
         if source[index] != target[index]:
             cost1 = dp(source[index + 1:], target[index + 1:])
@@ -26,7 +25,7 @@ def dp(source, target):
             cost3 = dp(source[index + 1:], target)
             return 1 + min(cost1, cost2, cost3)
 
-    return total_cost
+    return 0
 
 
 def solution(source, target):

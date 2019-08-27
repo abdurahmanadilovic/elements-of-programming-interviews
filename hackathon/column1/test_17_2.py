@@ -3,6 +3,9 @@ from .problem_17_2_levensheiten_distance import solution
 
 
 class TestSolution(TestCase):
+    def testSame(self):
+        self.assertEqual(0, solution('a', 'a'))
+
     def testLength1(self):
         self.assertEqual(1, solution('a', 'b'))
 
