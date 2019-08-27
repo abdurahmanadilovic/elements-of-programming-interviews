@@ -17,10 +17,8 @@ def dp(source, target):
     total_cost = 0
 
     for index in range(longest):
-        if index == len(source):
-            return total_cost + len(target) - len(source)
-        if index == len(target):
-            return total_cost + len(source) - len(target)
+        if index == len(source) or index == len(target):
+            return total_cost + abs(len(target) - len(source))
 
         if source[index] != target[index]:
             cost1 = dp(source[index + 1:], target[index + 1:])
